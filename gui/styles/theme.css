@@ -1,0 +1,56 @@
+window {
+    background-color: #f4f4f9;
+    color: #333333;
+    font-family: Sans, sans-serif;
+}
+
+headerbar {
+    background-color: #e0e0e5;
+    border-bottom: 1px solid #d0d0d5;
+    padding: 6px;
+}
+
+listbox {
+    background-color: #e0e0e5;
+    border-right: none;
+}
+
+listbox row {
+    padding: 8px 12px;
+    border-bottom: 1px solid #d0d0d5;
+}
+
+listbox row:selected {
+    background-color: #4caf50;
+    color: white;
+}
+
+treeview {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d5;
+}
+
+treeview:selected {
+    background-color: #4caf50;
+    color: white;
+}
+
+progressbar trough {
+    background-color: #d0d0d5;
+    border-radius: 4px;
+    min-height: 10px;
+}
+
+progressbar progress {
+    background-color: #4caf50;
+    border-radius: 4px;
+}
+
+button {
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #d0d0d5;
+}
