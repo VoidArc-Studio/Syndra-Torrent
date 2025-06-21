@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package syndra;
+
+service TorrentService {
+    rpc AddTorrent (AddTorrentRequest) returns (AddTorrentResponse);
+    rpc GetStatus (GetStatusRequest) returns (GetStatusResponse);
+    rpc PauseTorrent (PauseTorrentRequest) returns (PauseTorrentResponse);
+    rpc ResumeTorrent (ResumeTorrentRequest) returns (ResumeTorrentResponse);
+    rpc RemoveTorrent (RemoveTorrentRequest) returns (RemoveTorrentResponse);
+}
+
+message AddTorrentRequest {
+    string magnet_link = 1;
+}
+
+message AddTorrentResponse {
+    bool success = 1;
+    string error = 2;
+    string torrent_id = 3;
+}
+
+message GetStatusRequest {}
+
+message TorrentStatus {
+    string torrent_id = 1;
+    string name = 2;
+    float progress = 3;
+    int32 download_speed = 4;
+    int32 upload_speed = 5;
+    int32 eta = 6;
+    string status = 7;
+    repeated string files = 8;
+    int32 peers = 9;
+}
+
+message GetStatusResponse {
+    repeated TorrentStatus torrents = 1;
+}
+
+message PauseTorrentRequest {
+    string torrent_id = 1;
+}
+
+message PauseTorrentResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message ResumeTorrentRequest {
+    string torrent_id = 1;
+}
+
+message ResumeTorrentResponse {
+    bool success = 1;
+    string error = 2;
+}
+
+message RemoveTorrentRequest {
+    string torrent_id = 1;
+}
+
+message RemoveTorrentResponse {
+    bool success = 1;
+    string error = 2;
+}
