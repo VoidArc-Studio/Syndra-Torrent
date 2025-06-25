@@ -1,3 +1,0 @@
-pygobject==3.48.2
-grpcio==1.66.2
-grpcio-tools==1.66.2
