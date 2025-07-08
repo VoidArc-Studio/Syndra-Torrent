@@ -30,7 +30,7 @@ else
 fi
 
 # Klonowanie repozytorium (zakładam, że kod jest w repozytorium git, np. na GitHub)
-REPO_URL="https://github.com/username/syndra-torrent.git" # Zastąp odpowiednim URL repozytorium
+REPO_URL="https://github.com/VoidArc-Studio/Syndra-Torrent.git" # Zastąp odpowiednim URL repozytorium
 if [ ! -d "syndra-torrent" ]; then
     echo "Klonowanie repozytorium Syndra Torrent..."
     git clone "$REPO_URL" syndra-torrent
